@@ -1,0 +1,67 @@
+.menu {
+    background-color: #455bc4;
+    margin-top: 5px;
+
+    /* cho các phần tử nằm ngang */
+    display: flex;
+    /* căn theo chiều ngang + kéo giãn khoảng cách */
+    justify-content: space-between;
+
+    padding: 0 40px;
+    /* dùng để xóa ký hiệu mặc định của danh sách. */
+    list-style: none;
+}
+.menu li {
+    display: inline-block;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+.menu li:first-child {
+    border-left: none;
+}
+.menu li a::before {
+    content: "\25B6";
+    margin-right: 8px;
+    font-size: 12px;
+}
+.menu li a {
+    color: white;
+
+    padding: 10px 20px;
+
+    /* bỏ trang trí gạch chân trong thẻ a */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.menu li a:hover {
+    background-color: white;
+     color: #455bc4;
+}
+
+
+.menu .active a {
+    color: black;
+    background-color: white;
+}
+.dropdown {
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    /* Cho toàn bộ chữ trong dropdown căn trái. */
+    text-align: left;
+}
+
+.dropdown a:hover {
+    color: black !important;
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.menu li.active a {
+    background-color: white;
+    color: #455bc4;
+    font-weight: bold;
+}
+
