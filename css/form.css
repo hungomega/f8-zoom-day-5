@@ -16,7 +16,10 @@ body {
     padding: 30px;
     border-radius: 10px;
 }
-
+.container:focus-within {
+    border-color: #455bc4;
+    box-shadow: 0 0 25px rgba(29, 62, 226, 0.8);
+}
 h1 {
     text-align: center;
     margin-bottom: 30px;
@@ -55,7 +58,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
+button:hover {
+    background-color: #2f44a5;
+    transform: scale(1.15);
+}
+button:active {
+    transform: scale(1.35);
+    background-color: #1d2f7a;
+}
 p {
     margin-bottom: 10px;
     font-weight: bold;
@@ -72,3 +82,19 @@ p {
     background-size: cover;
     background-position: center;
 }
+input:focus {
+    border: 3px solid #332729;
+    outline: none;
+}
+
+
+/* khi nhập sai */
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+label:has(input[required])::after {
+    content: " *";
+    color: red;
+}
+

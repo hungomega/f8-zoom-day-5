@@ -37,9 +37,8 @@
 
 .menu li a:hover {
     background-color: white;
-     color: #455bc4;
+    color: #455bc4;
 }
-
 
 .menu .active a {
     color: black;
@@ -64,4 +63,3 @@
     color: #455bc4;
     font-weight: bold;
 }
-
